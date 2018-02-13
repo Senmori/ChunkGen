@@ -1,0 +1,25 @@
+{
+  "language.code":"en_US",
+  "language.region":"United States",
+  "language.name":"English",
+
+  "__Chunk Generation Information Section__": "Informational messages about chunk generation go here",
+  "chunk.info.pauseForPlayers":"Pausing chunk generation for online players.",
+  "chunk.info.updateMessage":"Chunk generated at [X:{0} Z:{1}][World:{2}] : {3}% completed.",
+  "chunk.info.maxChunkAmountReached":"Too many chunks loaded. Required less than {0}, found {1}.",
+  "chunk.info.unloadChunksForWorld":"Unloading all chunks for world {0}.",
+  "chunk.info.unloadedChunksForWorld":"Unloaded {0} chunk(s) for world {0}.",
+  "chunk.info.chunkGenerationComplete":"Chunk generation complete! Generated {0} chunks for region {2}.",
+  "chunk.info.chunkGenerationKickMessage":"Cannot be online during chunk generation!",
+
+  "__Generic Information Messages__" : "All generic informational messages go here",
+  "login.message.deny":"Cannot join server during chunk generation!",
+
+  "__Error Section__":"Error messages go here",
+  "chunk.error.worldLoadFailure":"Failed to load world from UUID {0}.",
+  "chunk.error.chunkLoadFailure":"Failed to load chunk at [X:{0}, Z:{1}].",
+  "chunk.error.cancelTaskForRegion":"Error occurred! Cancelling chunk generation task for region {0}.",
+
+  "__Command Error Messages":"All command error messages go here",
+  "command.error.invalidRegionArgs":"You must provide the correct arguments for this command!"
+}

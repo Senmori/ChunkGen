@@ -1,0 +1,16 @@
+players:
+  prevent-joins: true
+  pause-for-online-players: true
+  login-deny-message: "Cannot join server during chunk generation!"
+  kick-for-gen-message: "Cannot be online during chunk generation!"
+
+settings:
+  chunks-per-tick: 1
+  update-delay: 40
+  max-chunks-loaded: 3000
+  disable-world-saving: true
+  cancel-task-on-error: false
+
+
+
+

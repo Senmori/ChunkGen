@@ -91,6 +91,7 @@ fabric.properties
 hs_err_pid*
 
 # Mine
+*.iml
 .idea/
 target/
 *.sh

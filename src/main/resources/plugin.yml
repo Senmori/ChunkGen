@@ -1,0 +1,12 @@
+name: ChunkPreGen
+version: ${project.version}
+main: net.senmori.chunkgen.ChunkPreGen
+prefix: CPG
+load: POSTWORLD
+authors: [Senmori]
+description: A plugin to pre-generate chunks.
+permissions:
+  cg.messages.error:
+    default: op
+  cg.messages.info:
+    default: op
