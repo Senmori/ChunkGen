@@ -35,11 +35,11 @@ public class ChunkPos {
     }
 
     public boolean equals(Object other) {
-        if ( other == null || ! ( other instanceof ChunkPos ) ) {
+        if ( !( other instanceof ChunkPos ) ) {
             return false;
         }
         ChunkPos pos = ( ChunkPos ) other;
-        return pos.getX() == this.getX() && pos.getZ() == this.getZ();
+        return pos.getX() == this.getX() && pos.getZ() == this.getZ() && this.getWorldUID().equals( pos.getWorldUID() );
     }
 
     public int getX() {
