@@ -9,7 +9,7 @@
   "chunk.info.maxChunkAmountReached":"Too many chunks loaded. Required less than {0}, found {1}.",
   "chunk.info.unloadChunksForWorld":"Unloading all chunks for world {0}.",
   "chunk.info.unloadedChunksForWorld":"Unloaded {0} chunk(s) for world {0}.",
-  "chunk.info.chunkGenerationComplete":"Chunk generation complete! Generated {0} chunks for region {2}.",
+  "chunk.info.chunkGenerationComplete":"Chunk generation complete! Generated {0} chunks for region {1}.",
   "chunk.info.chunkGenerationKickMessage":"Cannot be online during chunk generation!",
 
   "__Generic Information Messages__" : "All generic informational messages go here",

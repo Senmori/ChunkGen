@@ -1,5 +1,8 @@
 package net.senmori.chunkgen.language;
 
+/**
+ * Enum which holds all the language codes.
+ */
 public enum LangKey {
     LANG_CODE("language.code"),
     LANG_REGION("language.region"),
@@ -28,10 +31,18 @@ public enum LangKey {
     }
 
     public String getTranslation() {
-        return LanguageHandler.getInstance().getServerLocale().translate( this.key, true );
+        return getTranslation( true );
     }
 
     public String getTranslation(Object... args) {
-        return LanguageHandler.getInstance().getServerLocale().translate( this.key, true, args );
+        return getTranslation( true, args );
+    }
+
+    public String getTranslation(boolean formatColor) {
+        return LanguageHandler.getInstance().getServerLocale().translate( this.key, formatColor );
+    }
+
+    public String getTranslation(boolean formatColor, Object... args) {
+        return LanguageHandler.getInstance().getServerLocale().translate( this.key, formatColor, args );
     }
 }

@@ -2,9 +2,9 @@ package net.senmori.chunkgen.chunk.shape;
 
 import net.senmori.chunkgen.chunk.ChunkPos;
 
-import java.util.Set;
+import java.util.Collection;
 
 public interface ShapeLoader {
 
-    Set<ChunkPos> createShape(ChunkPos center, int radius);
+    Collection<ChunkPos> createShape(ChunkPos center, int radius);
 }

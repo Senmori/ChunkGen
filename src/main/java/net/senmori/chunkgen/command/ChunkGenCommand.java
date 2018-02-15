@@ -45,11 +45,11 @@ public class ChunkGenCommand extends BaseCommand {
 
     /*
      * Create a persistent region.
-     * /cg create <regionName> <x> <z> <radius> <world> <shape>
+     * /cg create <regionName> <x> <z> <radius> <shape>
      */
     @Subcommand( "create" )
     @CommandPermission( Permissions.CMD_CREATE_REGION )
-    public void createRegion(CommandSender sender, String regionName, String chunkX, String chunkZ, int radius, @Values("@worlds") World world, @Default("square") @Values("@shapes") Shape shape) {
+    public void createRegion(CommandSender sender, String regionName, String chunkX, String chunkZ, int radius, Shape shape, @Optional World world) {
 
         int cx = 0;
         int cz = 0;
@@ -75,10 +75,10 @@ public class ChunkGenCommand extends BaseCommand {
         } else if(sender instanceof Player) {
             worldUUID = ((Player)sender).getWorld().getUID();
         } else {
-            return;
+            worldUUID = Bukkit.getWorlds().get( 0 ).getUID();
         }
 
-        ChunkPos center = new ChunkPos(cx, cz, worldUUID);
+        ChunkPos center = new ChunkPos( cx, cz, worldUUID );
 
         ChunkRegion region = new ShapedChunkRegion( regionName, shape, center, radius);
         ChunkRegionHandler.getInstance().addChunkRegion( region );

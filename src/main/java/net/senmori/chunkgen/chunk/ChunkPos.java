@@ -51,26 +51,6 @@ public class ChunkPos {
     }
 
     public String toString() {
-        return "[" + this.x + ", " + this.z + "]";
+        return "ChunkPos{X=" + this.x + ", Z=" + this.z + "}";
     }
-
-    public static Comparator<ChunkPos> byAngleComparator(ChunkPos center) {
-        final int centerX = center.getX();
-        final int centerZ = center.getZ();
-        return new Comparator<ChunkPos>() {
-            @Override
-            public int compare(ChunkPos o1, ChunkPos o2) {
-                float angle0 = angleToX( centerX, centerZ, o1.getX(), o2.getZ() );
-                float angle1 = angleToX( centerX, centerZ, o2.getX(), o2.getZ() );
-                return Float.compare( angle0, angle1 );
-            }
-        };
-    }
-
-    private static float angleToX(int centerX, int centerZ, int x, int z) {
-        float dx = x - centerX;
-        float dz = z - centerZ;
-        return ( float ) ( Math.atan2( dz, dx ) );
-    }
-
 }

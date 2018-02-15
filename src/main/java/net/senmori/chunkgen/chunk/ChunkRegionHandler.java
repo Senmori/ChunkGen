@@ -14,6 +14,7 @@ import org.bukkit.Server;
 import org.bukkit.World;
 import org.bukkit.command.CommandSender;
 import org.bukkit.scheduler.BukkitRunnable;
+import org.bukkit.scheduler.BukkitTask;
 
 import java.util.Collection;
 import java.util.LinkedList;
@@ -30,6 +31,7 @@ public class ChunkRegionHandler {
     private boolean running = false;
 
     private BukkitRunnable loader;
+    private BukkitTask currentTask;
     private ChunkGenerateTask currentGenerateTask = null;
     private ChunkRegion currentRegion = null;
 
@@ -45,7 +47,8 @@ public class ChunkRegionHandler {
     }
 
     public boolean start() {
-        if( isRunning() ) {
+        if( isRunning() || ( currentTask != null && !currentTask.isCancelled() ) ) {
+            // only start task if we are already running or if the current task is cancelled
             return false;
         }
         running = true;
@@ -78,7 +81,7 @@ public class ChunkRegionHandler {
             }
         };
 
-        loader.runTaskTimer( owner, 1L, 1L );
+        currentTask = loader.runTaskTimer( owner, 1L, 1L );
         return true;
     }
 

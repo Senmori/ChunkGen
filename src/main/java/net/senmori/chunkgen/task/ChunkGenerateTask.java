@@ -6,12 +6,14 @@ import net.senmori.chunkgen.ChunkPreGen;
 import net.senmori.chunkgen.callbacks.SimpleCallback;
 import net.senmori.chunkgen.chunk.ChunkPos;
 import net.senmori.chunkgen.chunk.ChunkRegion;
+import net.senmori.chunkgen.chunk.comparator.DefaultChunkPosComparator;
 import net.senmori.chunkgen.configuration.Settings;
 import net.senmori.chunkgen.language.LangKey;
 import org.bukkit.Server;
 import org.bukkit.World;
 import org.bukkit.scheduler.BukkitRunnable;
 
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.stream.Stream;
 
@@ -41,8 +43,7 @@ public class ChunkGenerateTask extends BukkitRunnable {
         this.callback = callback;
         this.pausedUpdateInterval = settings.UPDATE_DELAY.getValue().intValue();
 
-        // sort them by angle compared to the center
-        //queuedRegions.sort( ChunkPos.byAngleComparator( region.getCenter() ) );
+        queuedRegions.sort( new DefaultChunkPosComparator() );
     }
 
     @Override
@@ -141,7 +142,6 @@ public class ChunkGenerateTask extends BukkitRunnable {
     }
 
     private void sendCallback(String message, String permission) {
-        ChunkPreGen.log().info( message );
         if(callback != null ) {
             callback.accept( message, permission );
         }

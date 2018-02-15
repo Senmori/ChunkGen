@@ -3,7 +3,6 @@ package net.senmori.chunkgen.configuration;
 import net.senmori.senlib.configuration.ConfigManager;
 import net.senmori.senlib.configuration.option.BooleanOption;
 import net.senmori.senlib.configuration.option.NumberOption;
-import net.senmori.senlib.configuration.option.StringOption;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -38,13 +37,13 @@ public class Settings extends ConfigManager {
 
     @Override
     public boolean load(FileConfiguration configuration) {
-        getOptions().values().stream().forEach( option -> option.load( configuration ) );
+        getOptions().values().forEach( option -> option.load( configuration ) );
         return true;
     }
 
     @Override
     public boolean save(FileConfiguration configuration) {
-        getOptions().values().stream().allMatch( option -> option.save( configuration ) );
+        getOptions().values().forEach( option -> option.save( configuration ) );
         return true;
     }
 

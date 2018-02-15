@@ -29,10 +29,12 @@ public class LanguageHandler {
         rootLocale.loadLanguage( this.getClass().getResourceAsStream( "/lang/en_US.json" ) );
     }
 
-    public void setCurrentServerLocale(File localeFile) {
+    public void setServerLocale(File localeFile) {
         this.currentServerLocale = loadLangMap( localeFile );
         currentServerLocale.loadLanguage( currentServerLocale.parseInput( localeFile ) );
     }
+
+
 
     public void setServerLocale(AbstractLanguageMap locale) {
         this.currentServerLocale = locale;

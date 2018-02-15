@@ -44,8 +44,6 @@ public class ChunkPreGen extends JavaPlugin {
         manager = new BukkitCommandManager( this );
         registerCommands();
         manager.registerCommand( new ChunkGenCommand() );
-
-        debug( LangKey.INFO_UPDATE_MESSAGE.getTranslation( 12, -7, "world", "12.34" ) );
     }
 
 
