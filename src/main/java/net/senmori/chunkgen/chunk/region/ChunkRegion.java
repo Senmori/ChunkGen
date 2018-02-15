@@ -1,5 +1,6 @@
-package net.senmori.chunkgen.chunk;
+package net.senmori.chunkgen.chunk.region;
 
+import net.senmori.chunkgen.chunk.ChunkPos;
 import net.senmori.chunkgen.chunk.shape.Shape;
 
 import java.util.Set;

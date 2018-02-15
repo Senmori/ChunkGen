@@ -1,6 +1,6 @@
 package net.senmori.chunkgen.chunk.shape;
 
-import net.senmori.chunkgen.chunk.ChunkRegion;
+import net.senmori.chunkgen.chunk.region.ChunkRegion;
 
 /**
  * This enum determines what shape a {@link ChunkRegion} is.

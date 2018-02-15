@@ -5,7 +5,7 @@ import net.senmori.chunkgen.Permissions;
 import net.senmori.chunkgen.ChunkPreGen;
 import net.senmori.chunkgen.callbacks.SimpleCallback;
 import net.senmori.chunkgen.chunk.ChunkPos;
-import net.senmori.chunkgen.chunk.ChunkRegion;
+import net.senmori.chunkgen.chunk.region.ChunkRegion;
 import net.senmori.chunkgen.chunk.comparator.DefaultChunkPosComparator;
 import net.senmori.chunkgen.configuration.Settings;
 import net.senmori.chunkgen.language.LangKey;
@@ -13,7 +13,6 @@ import org.bukkit.Server;
 import org.bukkit.World;
 import org.bukkit.scheduler.BukkitRunnable;
 
-import java.util.Collections;
 import java.util.LinkedList;
 import java.util.stream.Stream;
 

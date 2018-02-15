@@ -1,7 +1,8 @@
-package net.senmori.chunkgen.chunk.shape;
+package net.senmori.chunkgen.chunk.shape.loader;
 
 import com.google.common.collect.Sets;
 import net.senmori.chunkgen.chunk.ChunkPos;
+import net.senmori.chunkgen.chunk.shape.ShapeLoader;
 
 import java.util.Set;
 

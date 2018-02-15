@@ -1,21 +1,18 @@
 package net.senmori.chunkgen.command;
 
 import net.senmori.acf.BaseCommand;
-import net.senmori.acf.InvalidCommandArgument;
 import net.senmori.acf.annotation.CommandAlias;
 import net.senmori.acf.annotation.CommandPermission;
 import net.senmori.acf.annotation.Default;
 import net.senmori.acf.annotation.Description;
 import net.senmori.acf.annotation.Optional;
-import net.senmori.acf.annotation.Single;
 import net.senmori.acf.annotation.Subcommand;
-import net.senmori.acf.annotation.Values;
 import net.senmori.chunkgen.ChunkPreGen;
 import net.senmori.chunkgen.Permissions;
 import net.senmori.chunkgen.chunk.ChunkPos;
-import net.senmori.chunkgen.chunk.ChunkRegion;
+import net.senmori.chunkgen.chunk.region.ChunkRegion;
 import net.senmori.chunkgen.chunk.ChunkRegionHandler;
-import net.senmori.chunkgen.chunk.ShapedChunkRegion;
+import net.senmori.chunkgen.chunk.region.ShapedChunkRegion;
 import net.senmori.chunkgen.chunk.shape.Shape;
 import net.senmori.chunkgen.configuration.Settings;
 import org.apache.commons.lang3.math.NumberUtils;

@@ -2,6 +2,7 @@ package net.senmori.chunkgen.chunk.shape;
 
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Maps;
+import net.senmori.chunkgen.chunk.shape.loader.SquareShapeLoader;
 
 import java.util.Map;
 import java.util.Set;

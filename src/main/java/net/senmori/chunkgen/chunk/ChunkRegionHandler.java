@@ -2,17 +2,16 @@ package net.senmori.chunkgen.chunk;
 
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
-import net.senmori.acf.annotation.Dependency;
 import net.senmori.chunkgen.ChunkPreGen;
 import net.senmori.chunkgen.callbacks.BroadcastCallback;
+import net.senmori.chunkgen.chunk.region.ChunkRegion;
+import net.senmori.chunkgen.chunk.region.ShapedChunkRegion;
 import net.senmori.chunkgen.chunk.shape.Shape;
 import net.senmori.chunkgen.configuration.Settings;
 import net.senmori.chunkgen.task.ChunkGenerateTask;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Server;
-import org.bukkit.World;
-import org.bukkit.command.CommandSender;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.scheduler.BukkitTask;
 
